@@ -11,7 +11,9 @@ using namespace std;
 multiset<int> a;
 int n, m;
 
-int main() 
+long long sum = 0;
+
+int main()
 {
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
@@ -27,5 +29,9 @@ int main()
 		a.erase(prev(a.end()));
 		a.insert(ai);
 	}
-	cout << accumulate(a.begin(), a.end(), 0);
+	for (auto i = a.begin(); i != a.end(); ++i)
+	{
+		sum += *i;
+	}
+	cout << sum;
 }
