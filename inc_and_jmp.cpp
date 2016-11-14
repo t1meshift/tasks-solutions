@@ -13,7 +13,10 @@ int main()
 	while (cin >> a)
 	{
 		if (a == 'i')
+		{
 			add_cnt++;
+			result++;
+		}
 		else
 			result += add_cnt;
 	}
