@@ -17,9 +17,9 @@ int main()
 #endif
 */
 	cin >> n;
-	if (n < 11)
+	if (n < 2)
 	{
-		cout << (n == 1) ? 1 : 2;
+		cout << 1;
 		return 0;
 	}
 
