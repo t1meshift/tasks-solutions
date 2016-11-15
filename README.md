@@ -9,5 +9,6 @@
 + Add one (https://imcs.dvfu.ru/cats/static/problem_text-cpid-1097794.html)
 + Jump or increment? (https://imcs.dvfu.ru/cats/static/problem_text-cpid-1092035.html)
 + Boulders (https://imcs.dvfu.ru/cats/static/problem_text-cpid-1089481.html)
++ How many iterations? (https://imcs.dvfu.ru/cats/static/problem_text-cpid-873923.html)
 
 **Также каждый может сделать pull request и залить любое решение любой задачи.**
