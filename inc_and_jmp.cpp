@@ -4,7 +4,7 @@
 using namespace std;
 
 char a;
-int add_cnt = 0, result = 0;
+long long add_cnt = 0, result = 0;
 
 int main()
 {
