@@ -1,0 +1,23 @@
+ALPHABET 1
+
+START Z -> GO1 Z >
+ 
+GO1 1 -> GO1 1 >
+GO1 Z -> DEC1 Z <
+ 
+DEC1 1 -> Q4 Z <
+DEC1 Z -> Q8 Z <
+ 
+Q4 1 -> Q4 1 <
+Q4 Z -> Q5 Z <
+ 
+Q5 1 -> Q5 1 <
+Q5 Z -> Q6 Z >
+ 
+Q6 1 -> Q7 Z >
+ 
+Q7 1 -> Q7 1 >
+Q7 Z -> START Z .
+ 
+Q8 1 -> Q8 1 <
+Q8 Z -> END Z >
