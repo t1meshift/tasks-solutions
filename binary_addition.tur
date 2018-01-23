@@ -1,0 +1,48 @@
+ALPHABET 0,1,o,i
+# finding a bit
+START Z -> FindBitStart Z >
+FindBitStart 0 -> FindBitStart 0 >
+FindBitStart 1 -> FindBitStart 1 >
+FindBitStart Z -> BitStartFound Z <
+ 
+# if found 1 then add 1 to current bit and mark it
+BitStartFound 1 -> AddOneBegin Z <
+# if found 0 then just mark current bit
+BitStartFound 0 -> AddZeroBegin Z <
+# if found nothing then we've just run out of 2nd number
+BitStartFound Z -> StartOutput Z <
+ 
+AddOneBegin 1 -> AddOneBegin 1 <
+AddOneBegin 0 -> AddOneBegin 0 <
+AddOneBegin Z -> AddOne Z <
+AddOne o -> AddOne o <
+AddOne i -> AddOne i <
+AddOne 0 -> ReturnBack i >
+AddOne Z -> ReturnBack i >
+AddOne 1 -> AddOneCarry o <
+ 
+#carry
+AddOneCarry 0 -> ReturnBack 1 >
+AddOneCarry Z -> ReturnBack 1 >
+AddOneCarry 1 -> AddOneCarry 0 <
+ 
+AddZeroBegin 1 -> AddZeroBegin 1 <
+AddZeroBegin 0 -> AddZeroBegin 0 <
+AddZeroBegin Z -> AddZero Z <
+AddZero o -> AddZero o <
+AddZero i -> AddZero i <
+AddZero 1 -> ReturnBack i >
+AddZero 0 -> ReturnBack o >
+ 
+ReturnBack o -> ReturnBack o >
+ReturnBack i -> ReturnBack i >
+ReturnBack 0 -> ReturnBack 0 >
+ReturnBack 1 -> ReturnBack 1 >
+ReturnBack Z -> START Z .
+ 
+StartOutput i -> StartOutput 1 <
+StartOutput o -> StartOutput 0 <
+# workarounds to make it run kek
+StartOutput 1 -> StartOutput 1 <
+StartOutput 0 -> StartOutput 0 <
+StartOutput Z -> END Z >
